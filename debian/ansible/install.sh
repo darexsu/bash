@@ -4,7 +4,7 @@ echo "Enter only codename of version debian: 8 - trusty, 9 - xenial, 10 - bionic
 read $version
 #-----------------------------------------
 
-#Функция статуса выполнения комманд OK/Fail
+#----------------------Function OK/Fail---
 
 		function StartScript {
 			echo -n "${blue}[${Commandname}: Start]"	
@@ -27,32 +27,32 @@ read $version
 
 
 	
-	Commandname="Добавление deb в Sources.list.d"
+	Commandname="update sources.list.d"
 	StartScript
 	echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu ${version} main">/etc/apt/sources.list.d/ansible.list
 	EndScript
 	
-	Commandname="Установка ключей Ansible"
+	Commandname="add gpg key Ansible"
 	StartScript
 	apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 	EndScript
 	
-	Commandname="Apt update: Обновить базы данных пакетов"
+	Commandname="apt update"
 	StartScript
 	apt update
 	EndScript
 	
-	Commandname="Устанока Ansible"
+	Commandname="install ansible"
 	StartScript
 	apt install -y ansible
 	EndScript
 	
-	Commandname="Устанока sshpass"
+	Commandname="install sshpass"
 	StartScript
 	apt install -y sshpass
 	EndScript
 	
-	Commandname="Проверка Ansible"
+	Commandname="check ansible"
 	StartScript
 	ansible --version
 	EndScript
