@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "version debian: 8 - trusty, 9 - xenial, 10 - bionic, 11 - focal."
+echo "Enter only codename version debian: 8 - trusty, 9 - xenial, 10 - bionic, 11 - focal."
 read $version
 #-----------------------------------------
 
