@@ -52,6 +52,11 @@ read version
 	apt install -y sshpass
 	EndScript
 	
+	Commandname="install git"
+	StartScript
+	apt install -y git
+	EndScript
+	
 	Commandname="check ansible"
 	StartScript
 	ansible --version
