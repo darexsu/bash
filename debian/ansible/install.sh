@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Enter only codename of version debian: 8 - trusty, 9 - xenial, 10 - bionic, 11 - focal."
-read $version
+read version
 #-----------------------------------------
 
 #----------------------Function OK/Fail---
