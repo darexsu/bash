@@ -47,5 +47,5 @@ EndScript
 
 Commandname="Start test playbook"
 StartScript
-ansible-playbook start.yml -i ./hosts.ini -k
+ansible-playbook start.yml -i ./hosts.ini -kK
 EndScript
