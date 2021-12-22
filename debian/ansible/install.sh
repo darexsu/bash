@@ -29,7 +29,7 @@ read $version
 	
 	Commandname="update sources.list.d"
 	StartScript
-	echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu $version main">/etc/apt/sources.list.d/ansible.list
+	echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu ${version} main">/etc/apt/sources.list.d/ansible.list
 	EndScript
 	
 	Commandname="add gpg key Ansible"
