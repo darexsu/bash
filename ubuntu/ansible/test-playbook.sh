@@ -2,7 +2,7 @@
 
 #------------------------Function-Ok/Fail-----------------
 		function StartScript {
-			echo -n "${blue}[${Commandname}: Start]"	
+			echo -n "${blue}[${Commandname}: Start]"
 			echo -n "${reset}"
 			echo
 		}
@@ -26,16 +26,16 @@ read host_ip
 
 echo "Enter ansible user"
 read ansible_user
-	
+
 Commandname="Creat start.yml"
 StartScript
 echo "---
 - hosts: myservers
   become: yes
-  
+
   tasks:
     - name: test ping
-      ansible.builtin.ping:  
+      ansible.builtin.ping:
 " > "start.yml"
 EndScript
 
@@ -43,9 +43,4 @@ Commandname="Creat hosts.ini"
 StartScript
 echo "[myservers]
 ${host_ip} ansible_user=${ansible_user}" > "hosts.ini"
-EndScript
-
-Commandname="Start test playbook"
-StartScript
-ansible-playbook start.yml -i ./hosts.ini -kK
 EndScript
