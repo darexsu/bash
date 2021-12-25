@@ -42,6 +42,11 @@ install_test_playbook=1;
 		StartScript
 		echo "${user} ALL=NOPASSWD:/usr/lib/sftp-server" >> /etc/sudoers
 		EndScript
+
+		Commandname="restart ssh"
+		StartScript
+		systemctl restart ssh
+		EndScript
   fi
 
 	if [ $install_dialog = 1 ]; then
