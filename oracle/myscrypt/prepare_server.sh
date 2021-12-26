@@ -49,7 +49,7 @@ install_ansible=1;
 
 			Commandname="restart ssh"
 			StartScript
-			systemctl restart ssh
+			systemctl restart sshd
 			EndScript
 	fi
 
